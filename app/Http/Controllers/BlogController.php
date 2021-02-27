@@ -68,7 +68,7 @@ class BlogController extends Controller
 //        }
 //        Cache::forget('posts'); // remove cache
 //        #Cache::flush(); // Удаление всех данных из кеша
-        $posts = Post::orderBy('id', 'desc')->paginate(2); // paginate params: 1 - count_posts
+        $posts = Post::orderBy('id', 'desc')->paginate(12); // paginate params: 1 - count_posts
 
         return view('blog', compact('posts'));
     }
